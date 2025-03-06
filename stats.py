@@ -6,15 +6,15 @@ def get_book_text(filepath):
         return file.read()
     
 def num_chars(text):
-    characterCount = {}
+    character_count = {}
+    text = text.lower()
     for i in text:
-        i = i.lower()
-        if i in characterCount:
-            characterCount[i] += 1
+        if i in character_count:
+            character_count[i] += 1
         else:
-            characterCount[i] = 1
+            character_count[i] = 1
 
-    return characterCount
+    return character_count
 
 
 def sort_character_count(char_dict):
