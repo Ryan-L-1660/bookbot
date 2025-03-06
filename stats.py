@@ -24,7 +24,7 @@ def sort_character_count(char_dict):
     
     def sort_on(dict):
         return dict["count"]
-
+        char_list.sort(key=lambda x: x["char"])
     char_list.sort(reverse=True, key=sort_on)
     
     return char_list

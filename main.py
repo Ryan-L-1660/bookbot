@@ -22,10 +22,12 @@ def main():
     print("----------- Word Count ----------")
     print(f"Found {word_count} total words")
     for char_dict in sorted_chars:
-        char, count = char_dict["char"], char_dict["count"]
+        char = char_dict["char"]
+        count = char_dict["count"]
         if char.isalpha():
             print(f"{char}: {count}")
     
     print("============= END ===============")
-
-main() 
+    sorted_chars = sorted(sorted_chars, key=lambda x: x["char"])
+if __name__ == "__main__":
+    main()
